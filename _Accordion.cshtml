@@ -1,0 +1,35 @@
+<div class="co-container-outer">
+    <div class="co-container-inner co-accodion-wrapper" @Edit.Attribute("quick-edit-config", new { modules = new {  enable = true }})>
+    @foreach (var Content in AsDynamic(Data["Default"]))
+    {
+        // detect the demo item, because we shouldn't add inner content while still showing this one
+        var isDemoItem = Content.EntityGuid.ToString() == "e90752f1-29d5-46a3-984c-408d97feae91";
+        var initiallyExpanded = Content.InitiallyExpanded ?? false;
+
+        <div class="co-accodion-item">
+            <div class="co-accordion-title @(initiallyExpanded ? "active" : "")" sc-element">
+                @Content.Toolbar
+                <span class="co-accordion-icon">
+                    @if(!String.IsNullOrEmpty(Content.Icon)){
+                        <i class="glyphicon @Content.Icon co-icon" aria-hidden="true"></i>
+                    }
+                </span>
+                <h2>@Content.Title</h2>
+            </div>
+
+            @* prevent adding content if still showing the demo-item - this is done by only adding the class as needed *@
+            <div class="co-accordion-content @(isDemoItem ? "" : "sc-content-block-list")" 
+                style="@(initiallyExpanded ? "display:block;" : "")"
+                @Edit.ContextAttributes(Content, field: "DesignedContent")>
+                @foreach (var ac in Content.DesignedContent)
+                {
+                    @ac.Render();
+                }
+            </div>
+        </div>
+    }
+    </div>
+</div>
+
+todo: 
+* + / - icons to open/close and bootstrap styling
