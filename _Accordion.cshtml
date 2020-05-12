@@ -1,5 +1,6 @@
 @inherits ToSic.Sxc.Dnn.RazorComponent
 @using ToSic.Razor.Blade;
+@using ToSic.Sxc.Blocks;
 
 <div class="co-container-outer">
   <div class="co-container-inner co-accordion-wrapper" @Edit.Attribute("quick-edit-config", new { modules = new {  enable = true }})>
@@ -12,21 +13,23 @@
             @if(Text.Has(accord.Icon)) {
               <span><i class="co-icon fas @accord.Icon" aria-hidden="true"></i></span>
             }
-            @accord.Title
+            @accord.Title 
           </h2>
         </div>
 
         @* prevent adding content if still showing the demo-item - this is done by only adding the class as needed *@
-        <div class='co-accordion-content @(accord.IsDemoItem ? "" : "sc-content-block-list") @(initiallyExpanded ? "d-block" : "")'
-          @Edit.ContextAttributes(accord, field: "DesignedContent")>
-          @if(accord.IsDemoItem) {
+        @if(accord.IsDemoItem) {
+          <div class='co-accordion-content'>
             @Html.Raw(App.Resources.DemoItemMessage)
-          } else {
-            foreach (var designedContent in accord.DesignedContent) {
-              @ToSic.Sxc.Blocks.Render.One(designedContent);
+          </div>
+        } else {
+          <div class='co-accordion-content sc-content-block-list @(initiallyExpanded ? "d-block" : "")' @Edit.ContextAttributes(accord, field: "DesignedContent")>
+            @foreach (var designedContent in accord.DesignedContent) {
+              @Render.One(designedContent);
             }
-          }
-        </div>
+          </div>
+        }
+
       </div>
     }
   </div>
