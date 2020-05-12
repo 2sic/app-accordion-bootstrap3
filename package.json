@@ -1,7 +1,7 @@
 {
   "name": "accordion-app",
-  "version": "2.0.0",
-  "description": "![2sxc accordion logo](app-icon.png)",
+  "version": "3.0.0",
+  "description": "An accordion app for 2sxc",
   "main": "(none)",
   "scripts": {
     "build-prod": "webpack"
