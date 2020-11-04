@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.00.00" ModuleVersion="11.00.01" ExportDate="2020-05-12T14:23:50.5013101+02:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.00.00" ModuleVersion="11.07.03" ExportDate="2020-11-04T15:50:24.1317355+01:00">
   <Header>
     <App Guid="d2365022-78f5-42fc-8bf5-9b9558a9af3a" />
-    <Language Default="en-US" />
+    <Language Default="en-us" />
     <Dimensions>
       <Dimension DimensionID="42" Name="English (United States)" SystemKey="" ExternalKey="en-US" Active="true" />
       <Dimension DimensionID="43" Name="Deutsch (Deutschland)" SystemKey="" ExternalKey="de-DE" Active="true" />
@@ -270,7 +270,7 @@
       <Value Key="SupportsAjaxReload" Value="False" Type="Boolean">
         <Dimension DimensionID="42" ReadOnly="false" />
       </Value>
-      <Value Key="Version" Value="03.00.00" Type="String">
+      <Value Key="Version" Value="03.00.01" Type="String">
         <Dimension DimensionID="42" ReadOnly="false" />
       </Value>
     </Entity>
@@ -1055,6 +1055,56 @@
       <Value Key="ShowTemplateChooser" Value="True" Type="Boolean" />
       <Value Key="Template" Value="472882fc-f65c-4a8b-9408-7398b11bda2e" Type="String" />
       <Value Key="Title" Value="" Type="String" />
+    </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="ContentGroupReference" AttributeSetName="ContentGroupReference" EntityGUID="3ec8c892-66cc-4c32-9492-f9079e4a8fe8" Json="True">
+      <Value Key="App" Value="Default" Type="String" />
+      <Value Key="ShowTemplateChooser" Value="True" Type="Boolean" />
+      <Value Key="Template" Value="0c650deb-9b70-4ae0-bca1-ccfb7b11af10" Type="String" />
+      <Value Key="Title" Value="" Type="String" />
+    </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="ContentGroupReference" AttributeSetName="ContentGroupReference" EntityGUID="70b077e8-d02c-4fa0-869d-398c8915064c" Json="True">
+      <Value Key="App" Value="46d319be-70f5-40c5-aaf1-a827e2d863bd" Type="String" />
+      <Value Key="ContentGroup" Value="afc61437-8f31-4980-a382-5f2740c38755" Type="String" />
+      <Value Key="ShowTemplateChooser" Value="True" Type="Boolean" />
+      <Value Key="Template" Value="60db0aeb-e280-4394-bdb2-d31540f0a225" Type="String" />
+      <Value Key="Title" Value="" Type="String" />
+    </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="ContentGroupReference" AttributeSetName="ContentGroupReference" EntityGUID="3d18b19b-e545-48a5-9cb5-42c946aca8d7" Json="True">
+      <Value Key="App" Value="46d319be-70f5-40c5-aaf1-a827e2d863bd" Type="String" />
+      <Value Key="ShowTemplateChooser" Value="True" Type="Boolean" />
+      <Value Key="Template" Value="20f6954a-4176-44d5-9532-519ddef364ad" Type="String" />
+      <Value Key="Title" Value="" Type="String" />
+    </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="ContentGroupReference" AttributeSetName="ContentGroupReference" EntityGUID="f23a7956-0788-4f98-b477-c7e6ba3b5def" Json="True">
+      <Value Key="App" Value="Default" Type="String" />
+      <Value Key="ContentGroup" Value="4325162e-fcd7-4165-828b-33779d5950e6" Type="String" />
+      <Value Key="ShowTemplateChooser" Value="True" Type="Boolean" />
+      <Value Key="Template" Value="0c650deb-9b70-4ae0-bca1-ccfb7b11af10" Type="String" />
+      <Value Key="Title" Value="" Type="String" />
+    </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="ContentGroupReference" AttributeSetName="ContentGroupReference" EntityGUID="0acad572-5611-48cc-a089-a2a69551decd" Json="True">
+      <Value Key="App" Value="Default" Type="String" />
+      <Value Key="ShowTemplateChooser" Value="True" Type="Boolean" />
+      <Value Key="Template" Value="e5373cba-a864-426b-9e30-51ddc4369983" Type="String" />
+      <Value Key="Title" Value="" Type="String" />
+    </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="884e65b4-8f1c-4bc9-897f-147dcabeb941" AttributeSetName="Accordion" EntityGUID="70e4e39f-e5ba-48cf-879d-7dac1e159442">
+      <Value Key="DesignedContent" Value="556478b1-cb14-4cf0-a7cd-376c4c93e2ff" Type="Entity" />
+      <Value Key="Icon" Value="fa-align-justify" Type="String">
+        <Dimension DimensionID="42" ReadOnly="false" />
+      </Value>
+      <Value Key="InitiallyExpanded" Value="False" Type="Boolean">
+        <Dimension DimensionID="42" ReadOnly="false" />
+      </Value>
+      <Value Key="Title" Value="Demo Accordion with long Content" Type="String">
+        <Dimension DimensionID="42" ReadOnly="false" />
+      </Value>
+    </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="ContentGroupReference" AttributeSetName="ContentGroupReference" EntityGUID="556478b1-cb14-4cf0-a7cd-376c4c93e2ff" Json="True">
+      <Value Key="App" Value="Default" Type="String" />
+      <Value Key="ContentGroup" Value="203feeb5-e5bd-44c7-9188-be5cf1b0eff7" Type="String" />
+      <Value Key="Template" Value="0c650deb-9b70-4ae0-bca1-ccfb7b11af10" Type="String" />
+      <Value Key="Title" Value="Demo" Type="String" />
     </Entity>
   </Entities>
   <PortalFiles />
